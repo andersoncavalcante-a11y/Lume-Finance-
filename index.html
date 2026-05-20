@@ -23,9 +23,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/icon-96.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
 
-    <!-- Splash screens iOS -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -36,6 +33,10 @@
       html,body,#root{height:100%;margin:0;background:#020408;}
       body{font-family:'Space Grotesk',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
     </style>
+
+    <!-- Supabase Storage Patch — deve rodar ANTES do bundle -->
+    <script src="/assets/storage-patch.js"></script>
+
     <script type="module" crossorigin src="/assets/index-CKJxt8Z0.js"></script>
   </head>
   <body>
