@@ -192,7 +192,13 @@
       if (btn) btn.remove();
     }
   });
-  obs.observe(document.body, { childList: true, subtree: true });
+  if (document.body) {
+    obs.observe(document.body, { childList: true, subtree: true });
+  } else {
+    document.addEventListener("DOMContentLoaded", () => {
+      obs.observe(document.body, { childList: true, subtree: true });
+    });
+  }
 
   console.log("[Lume Patch v2] ativo ✓ | modo:", localStorage.getItem(MODE_KEY) || "admin");
 
